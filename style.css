@@ -59,6 +59,7 @@ aside {
   text-decoration: none;
   color: var(--black);
   font-size: 1.2rem;
+  transition: color 0.3s ease-out 0.15s;
 }
 
 .side-links ul li a:hover {
@@ -182,6 +183,10 @@ aside {
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 25% 25% 25% 25%;
   gap: 16px;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: stretch;
 }
 
 #portfolio .grid-item {
