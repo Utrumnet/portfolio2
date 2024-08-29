@@ -1,3 +1,327 @@
+:root {
+  --black: #2f2f2f;
+  --white: #f7f7f7;
+  --grey: #c8d3d5;
+  --splash: #f5d0c5;
+  --sipka: #bd4f6c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: navajowhite;
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 3rem;
+}
+
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+section {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+aside {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side-links ul {
+  list-style-type: none;
+}
+
+.side-links ul li {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.side-links ul li a {
+  margin: 5px 0;
+
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.2rem;
+}
+
+.side-links ul li a.active {
+  font-weight: 100;
+  /*text-decoration: overline dotted var(--black);*/
+}
+
+.arrow-up {
+  position: relative;
+  top: 80px;
+}
+
+.arrow-down {
+  position: relative;
+  bottom: 80px;
+}
+
+.sipka-nahoru svg path {
+  fill: var(--black);
+  transition: fill 0.3s ease-out 0.15s;
+}
+.sipka-nahoru:hover svg path {
+  fill: var(--sipka);
+}
+
+.sipka-nahoru:hover svg {
+  transform: translateY(-1px);
+}
+
+.sipka-nahoru:active svg {
+  transform: translateY(2px);
+}
+
+.sipka-dolu svg path {
+  fill: var(--black);
+  transition: fill 0.3s ease-out 0.15s;
+}
+.sipka-dolu:hover svg path {
+  fill: var(--sipka);
+}
+
+.sipka-dolu:hover svg {
+  transform: translateY(-1px);
+}
+
+.sipka-dolu:active svg {
+  transform: translateY(2px);
+}
+
+/* Splash Section */
+
+#splash-aside {
+  background-color: var(--splash);
+  justify-content: center;
+}
+
+#splash {
+  background-color: var(--splash);
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#splash .content h1 {
+  font-size: 4rem;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#splash .content p {
+  font-size: 1.2em;
+  margin-top: 0rem;
+}
+
+#splash .first-arrow-down {
+  margin-top: 4rem;
+  font-size: 2em;
+}
+
+.prvni-sipka svg path {
+  fill: var(--black);
+  transition: fill 0.3s ease-out 0.15s;
+}
+
+.prvni-sipka:hover svg path {
+  fill: var(--sipka);
+}
+
+.prvni-sipka:hover svg {
+  transform: translateY(-1px);
+}
+
+.prvni-sipka:active svg {
+  transform: translateY(2px);
+}
+
+/* Portfolio Section */
+
+#portfolio-aside {
+  background-color: var(--grey);
+}
+
+#portfolio {
+  background-color: var(--grey);
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#portfolio .grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 25% 25% 25% 25%;
+  gap: 20px;
+  width: 1024px;
+}
+
+#portfolio .grid-item {
+  padding: 0px;
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+
+#portfolio img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.side-arrow {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.side-arrow a {
+  text-decoration: none;
+  font-size: 2em;
+  color: var(--black);
+}
+
+/* About Section */
+
+#about-aside {
+  background-color: var(--white);
+}
+
+#about {
+  background-color: var(--white);
+  text-align: left;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about .about-content {
+  display: flex;
+  align-items: center;
+}
+
+#about img {
+  width: 100%;
+  border-radius: 12px;
+  margin-right: 4rem;
+}
+
+#about .text {
+  max-width: 500px;
+}
+
+#about .text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Contact Section */
+#contact-aside {
+  background-color: var(--grey);
+  justify-content: space-between;
+}
+
+#contact {
+  background-color: var(--grey);
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#contact h2 {
+  position: relative;
+  top: 80px;
+}
+
+.contact-form {
+  position: relative;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.input-field {
+  width: 500px;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--white);
+  font-size: 1.2rem;
+  color: var(--black);
+  font-family: "Nunito sans";
+}
+
+.message-field {
+  height: 200px;
+}
+
+.submit-button {
+  background-color: var(--grey);
+  color: var(--black);
+  width: 120px;
+  height: 120px;
+  border: 4px solid var(--black);
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: border 0.3s;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.submit-button:hover {
+  border-color: var(--sipka);
+  color: var(--sipka);
+}
+
+#paticka {
+  position: relative;
+  bottom: 80px;
+  border-top: 4px solid var(--black);
+  text-align: center;
+  padding-top: 1.6rem;
+}
+
+#paticka #tel {
+  padding-right: 2rem;
+}
+#paticka a {
+  text-decoration: none;
+  color: var(--black);
+}
+#paticka a:hover {
+  text-decoration: none;
+  color: var(--sipka);
 }
