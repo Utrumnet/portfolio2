@@ -194,6 +194,10 @@ aside {
   margin: 0px;
 }
 
+#portfolio .grid-item:hover {
+  transform: translateY(-2px);
+}
+
 .jedna {
   grid-column: span 1;
   grid-row: span 2;
