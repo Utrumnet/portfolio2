@@ -56,10 +56,13 @@ aside {
 
 .side-links ul li a {
   margin: 5px 0;
-
   text-decoration: none;
   color: var(--black);
   font-size: 1.2rem;
+}
+
+.side-links ul li a:hover {
+  color: var(--sipka);
 }
 
 .side-links ul li a.active {
@@ -176,14 +179,53 @@ aside {
 
 #portfolio .grid {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 25% 25% 25% 25%;
-  gap: 20px;
-  width: 1024px;
+  gap: 16px;
 }
 
 #portfolio .grid-item {
   padding: 0px;
+}
+
+.jedna {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.dva {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.tri {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.ctyri {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.pet {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.pet {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.sest {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.sedm {
+  grid-column: span 1;
+  grid-row: span 1;
 }
 
 #portfolio img {
@@ -237,6 +279,15 @@ aside {
   font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 1rem;
+}
+
+#about .text a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+#about .text a:hover {
+  color: var(--sipka);
 }
 
 /* Contact Section */
