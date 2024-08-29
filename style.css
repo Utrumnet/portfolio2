@@ -186,6 +186,7 @@ aside {
 
 #portfolio .grid-item {
   padding: 0px;
+  margin: 0px;
 }
 
 .jedna {
@@ -282,7 +283,7 @@ aside {
 }
 
 #about .text a {
-  text-decoration: none;
+  text-decoration: underline solid var(--sipka) 1px;
   color: var(--black);
 }
 
